@@ -1,4 +1,4 @@
-let stockProductos = [
+const stockProductos = [
         {
                 id: 1, sabor: "Muzzarella", precio: 900, descripcion: "Un clásico, con el mejor queso muzzarella y orégano.", foto: "./imagenes/muzza.jpg"
         },
@@ -47,6 +47,8 @@ let stockProductos = [
         },
 ];
 
+const productos = stockProductos.map((prod)=>prod.sabor)
+console.log(productos) 
 let carrito = []
 
 const tarjetas = document.getElementById("tarjetas")
@@ -84,3 +86,4 @@ function agregarAlCarrito(pedido) {
         console.table(carrito);
         alert("Has agregado al carrito " +pedido.sabor);
 }
+
